@@ -170,6 +170,11 @@ label:hover:before {
     position: relative;
     user-select: none;
     width: 100%;
+    margin-bottom:10px;
+}
+.custom-select-wrapper.disabled {
+    opacity:0.2;
+    pointer-events:none;
 }
 .custom-select {
     position: relative;

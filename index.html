@@ -1,40 +1,50 @@
 <!doctype html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8">
-
-<title>Custom HubSpot Form with JSON</title>
-<meta name="copyright" content="2020">
-<meta name="author" content="Russell Benzing">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/hubspot.css">
-<link rel="stylesheet" href="css/styles.css">
-
+    <meta charset="utf-8">
+    <title>Custom HubSpot Form with JSON</title>
+    <meta name="copyright" content="2020">
+    <meta name="author" content="Russell Benzing">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/hubspot.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12">
             <div class="page-center">
                 <form>
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="text" id="exampleInputEmail1" placeholder="example@canonical.com" />
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" id="exampleInputPassword1" placeholder="******" />
-                    <div class="custom-select-wrapper">
-                        <label for="custom-select">Select an Item</label>
-                        <div class="custom-select" id="custom-select">
-                            <div class="custom-select__trigger"><span>Tesla</span>
+                    <label for="exampleInputFirstName">First Name</label>
+                    <input type="text" id="exampleInputFirstName" placeholder="First Name" />
+                    <label for="exampleInputLastName">Last Name</label>
+                    <input type="text" id="exampleInputLastName" placeholder="Last Name" />
+                    <div id="statesSelect" class="custom-select-wrapper states">
+                        <label for="custom-select">Select your State</label>
+                        <div class="custom-select states" id="custom-select">
+                            <div class="custom-select__trigger"><span>Choose One</span>
                                 <div class="arrow"></div>
                             </div>
-                            <div class="custom-options">
-                                <span class="custom-option selected" data-value="tesla">Tesla</span>
-                                <span class="custom-option" data-value="volvo">Volvo</span>
-                                <span class="custom-option" data-value="mercedes">Mercedes</span>
+                            <div class="custom-options states"></div>
+                        </div>
+                    </div>
+                    <div id="typesSelect" class="custom-select-wrapper disabled types">
+                        <label for="custom-select">Select your Program Type</label>
+                        <div class="custom-select types" id="custom-select">
+                            <div class="custom-select__trigger"><span>Choose One</span>
+                                <div class="arrow"></div>
                             </div>
+                            <div class="custom-options types"></div>
+                        </div>
+                    </div>
+                    <div id="schoolsSelect" class="custom-select-wrapper disabled schools">
+                        <label for="custom-select">Select your School</label>
+                        <div class="custom-select schools" id="custom-select">
+                            <div class="custom-select__trigger"><span>Choose One</span>
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="custom-options schools"></div>
                         </div>
                     </div>
                     <p>
